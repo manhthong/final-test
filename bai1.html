@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 1 - Sum of prime numbers</title>
+</head>
+<body>
+    <script>
+    function isPrime(number) {
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function findPrimes(lower, upper) {
+        var primeNumbers = [];
+            for (let i = a; i <= b; i++) {
+                if (isPrime(i)) {
+                    primeNumbers.push(i);
+                }
+            }
+    return primeNumbers;
+    }
+
+    function sumPrimes(primeNumbers) {
+        var sum = 0;
+            for (let i = 0; i < primeNumbers.length; i++) {
+                sum += primeNumbers[i];
+            }
+        return sum;
+    }
+
+    var a = prompt("Enter a: ");
+    var b = prompt("Enter b: ");
+
+    var primeNumbers = findPrimes(a, b);
+    var sum = sumPrimes(primeNumbers);
+
+    document.write("The sum of the prime numbers between " + a + " and " + b + " is " + sum);
+    </script>
+</body>
+</html>
